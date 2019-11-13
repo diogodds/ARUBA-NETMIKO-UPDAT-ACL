@@ -17,11 +17,8 @@ warnings.filterwarnings(action='ignore',module='.*paramiko.*')
 
 ########################################################################
 
-#timestr = time.strftime('%Y%m%d-%H%M%S')
-#second_octect = raw_input('Please type the second octect of the supernet of the WH: ')
-
 username = 'dsantos'
-#password = getpass.getpass()
+password = getpass.getpass()
 
 ########################################################################
 
@@ -45,7 +42,6 @@ for line in list_of_devices:
   start_time = datetime.now()
 
   net_connect = ConnectHandler(device_type='hp_procurve', ip=host_to_create[0], username=username, password=password, global_delay_factor=3.5)
-  #net_connect = ConnectHandler(device_type='hp_procurve', ip=host_to_create[0], username=username, password=password)
   
   print('Connected to ' + host_to_create[1])
   
